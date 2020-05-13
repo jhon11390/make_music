@@ -16,13 +16,14 @@ ActiveRecord::Schema.define(version: 2020_03_25_170600) do
     t.string "name"
     t.text "image_url"
     t.date "released_at"
+    t.integer "artist_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "artists", force: :cascade do |t|
     t.string "name"
-    t.text "imgage_url"
+    t.text "image_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -31,6 +32,7 @@ ActiveRecord::Schema.define(version: 2020_03_25_170600) do
     t.string "name"
     t.integer "number"
     t.text "preview_url"
+    t.integer "album_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
