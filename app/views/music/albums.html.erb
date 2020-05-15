@@ -1,0 +1,24 @@
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-8">
+      <h1><%= @artist.name %></h1>
+      <p>Albums (<%= @albums.length %>)</p>
+      <div class="row">
+        <% @albums.each do |album|%>
+          <div class="col-3">
+            <div class="card mt-4 mb-4">
+              <img src="<%= album.image_url %>" class="card-img-top img-thumbnail" alt="...">
+              <div class="card-body">
+                <h6 class="card-title"><strong><%= album.name %></strong></h6>
+                <h6 class="card-title"><%= album.released_at %></h6>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="col-4">
+      <img src="<%= @artist.image_url %>" class="img-thumbnail" alt="...">
+    </div>
+  </div>
+</div>
