@@ -3,7 +3,7 @@ class MusicController < ApplicationController
     @artistas = Artist.all
   end
 
-  def albums
+  def show
     @artist = Artist.find(params[:id])
     @albums = @artist.albums
   end
